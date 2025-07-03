@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio - Awwwards Style</title>
+  <title>Alejandro Rodriguez – Frontend Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap"
@@ -38,50 +38,53 @@
     }
 
     .glow-btn {
-      box-shadow: 0 0 8px #39ff14, 0 0 16px #00ff00;
+      box-shadow: 0 0 2px #39ff14, 0 0 16px #00ff00;
     }
   </style>
 </head>
 
 <body class="bg-[#000000] text-white">
+  <!-- Hero Section -->
   <section class="h-screen relative flex items-center justify-center text-center overflow-hidden">
     <img src="images/background.gif" class="absolute w-full h-full object-cover">
-    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-0"></div>
     <div class="relative z-10 max-w-3xl px-6 py-12">
       <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in neon-text">Alejandro Rodriguez</h1>
-      <p class="text-xl md:text-2xl text-[#39ff14] italic mb-6 fade-in" style="animation-delay: 0.3s">Lead Frontend
-        developer - Senior Frontend developer - Fullstack JS Developer</p>
-      <p>
-        Frontend Developer with 10 years of experience delivering high-quality, scalable, and user-centric
-        web applications across diverse industries including banking, telecommunications, news media, and
-        e-commerce. Proficient in modern frontend technologies such as React, Angular, HTML, CSS, and
-        JavaScript, with a strong focus on performance, responsive design, and maintainable code. Adept at
-        collaborating with cross-functional teams in agile environments to translate complex business
-        requirements into seamless digital experiences. Passionate about clean architecture, UI/UX best
-        practices, and continuous learning in a fast-evolving tech landscape.
+      <p class="text-xl md:text-2xl text-[#39ff14] italic mb-4 fade-in" style="animation-delay: 0.3s">
+        Lead Frontend Developer — Senior Frontend Engineer — Fullstack JS Developer
+      </p>
+      <p class="mb-4 fade-in text-gray-200 max-w-xl mx-auto" style="animation-delay: 0.4s">
+        Frontend developer with 10+ years of experience building scalable, high-performance web platforms across
+        e-commerce, media, fintech, and public sector projects. Skilled in React, Angular, and modern JS ecosystems,
+        with a strong focus on UI/UX, performance, and clean architecture.
+      </p>
+      <p class="mb-6 fade-in text-sm text-gray-400" style="animation-delay: 0.5s">
+        Based in Mexico. Fluent in Spanish, English, and Chinese.
       </p>
       <a href="#projects"
-        class="mt-4 inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in"
-        style="animation-delay: 0.6s">View projects</a>
+        class="inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in"
+        style="animation-delay: 0.6s">View Projects</a>
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a]">
     <div id="projects-container" class="grid gap-24"></div>
   </section>
 
+  <!-- Project Template -->
   <template id="project-template">
     <div class="fade-in">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <img src="" alt="Proyecto" class="rounded-3xl shadow-2xl w-full md:w-1/2 object-cover order-1" />
         <div class="mt-8 md:mt-0 md:w-1/2 order-2">
-          <h3 class="text-3xl font-semibold mb-2 text-[#39ff14] project-title">Título</h3>
-          <p class="mb-2 text-sm text-gray-400 font-light project-company">Compañía</p>
-          <p class="mb-4 text-gray-300 project-description">Descripción</p>
+          <h3 class="text-3xl font-semibold mb-2 text-[#39ff14] project-title">Title</h3>
+          <p class="mb-2 text-sm text-gray-400 font-light project-company">Company</p>
+          <p class="mb-4 text-gray-300 project-description">Description</p>
           <div class="flex flex-wrap gap-2 mb-4 tags"></div>
           <a href="#"
-            class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition project-link">View
-            project</a>
+            class="inline-block bg-[#fff] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition project-link">View
+            Project</a>
         </div>
       </div>
     </div>
