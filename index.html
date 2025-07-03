@@ -1,1 +1,102 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><script async src="https://www.googletagmanager.com/gtag/js?id=G-48NKQK6E2G"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-48NKQK6E2G")</script><title>Alejandro Rodríguez Larracilla</title><script defer="defer" src="/static/js/main.741db16c.js"></script><link href="/static/css/main.586378cb.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio - Awwwards Style</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .neon-text {
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #00ff00, 0 0 40px #00ff00;
+    }
+    .glow-btn {
+      box-shadow: 0 0 8px #39ff14, 0 0 16px #00ff00;
+    }
+  </style>
+</head>
+<body class="bg-[#000000] text-white">
+  <!-- Hero Section -->
+  <section class="h-screen relative flex items-center justify-center text-center overflow-hidden">
+    <video autoplay loop muted class="absolute w-full h-full object-cover">
+      <source src="https://cdn.coverr.co/videos/coverr-night-mountain-2330/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-90"></div>
+    <div class="relative z-10 max-w-3xl px-6 py-12">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in neon-text">Tu Nombre</h1>
+      <p class="text-xl md:text-2xl text-[#39ff14] italic mb-6 fade-in" style="animation-delay: 0.3s">Diseño + Tecnología + Magia Verde</p>
+      <a href="#projects" class="mt-4 inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in" style="animation-delay: 0.6s">Ver Proyectos</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a]">
+    <h2 class="text-4xl font-bold text-center mb-16 fade-in neon-text">🟢 Proyectos Verdes</h2>
+    <div id="projects-container" class="grid gap-24"></div>
+  </section>
+
+  <!-- Template and Script -->
+  <template id="project-template">
+    <div class="fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <img src="" alt="Proyecto" class="rounded-3xl shadow-2xl w-full md:w-1/2 object-cover order-1" />
+        <div class="mt-8 md:mt-0 md:w-1/2 order-2">
+          <h3 class="text-3xl font-semibold mb-2 text-[#39ff14]">Título</h3>
+          <p class="mb-4 text-gray-300">Descripción</p>
+          <p class="text-sm text-[#00ff00] mb-4">Tecnologías</p>
+          <a href="#" class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition">Ver Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    const container = document.getElementById('projects-container');
+    const template = document.getElementById('project-template');
+    for (let i = 1; i <= 20; i++) {
+      const clone = template.content.cloneNode(true);
+      const wrapper = clone.querySelector('div.flex');
+      const img = clone.querySelector('img');
+      const title = clone.querySelector('h3');
+      const desc = clone.querySelector('p');
+      const tech = clone.querySelectorAll('p')[1];
+      const link = clone.querySelector('a');
+
+      if (i % 2 === 0) {
+        wrapper.classList.add('md:flex-row-reverse');
+      }
+
+      img.src = `https://source.unsplash.com/random/800x600?sig=${i}`;
+      img.alt = `Proyecto ${i}`;
+      title.textContent = `Proyecto ${i}`;
+      desc.textContent = `Este es el proyecto número ${i}, diseñado para demostrar un enfoque profesional e inspirador.`;
+      tech.textContent = `Tecnologías: HTML, CSS, JS, API`;
+      link.href = `#proyecto-${i}`;
+
+      container.appendChild(clone);
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-[#000000] text-center py-10 text-sm text-[#39ff14]">
+    <p>&copy; 2025 Tu Nombre — Inspirado en Matrix ✨</p>
+  </footer>
+</body>
+</html>
