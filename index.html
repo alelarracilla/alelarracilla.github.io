@@ -44,7 +44,6 @@
 </head>
 
 <body class="bg-[#000000] text-white">
-  <!-- Hero Section -->
   <section class="h-screen relative flex items-center justify-center text-center overflow-hidden">
     <img src="images/background.gif" class="absolute w-full h-full object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-20"></div>
@@ -52,18 +51,25 @@
       <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in neon-text">Alejandro Rodriguez</h1>
       <p class="text-xl md:text-2xl text-[#39ff14] italic mb-6 fade-in" style="animation-delay: 0.3s">Lead Frontend
         developer - Senior Frontend developer - Fullstack JS Developer</p>
+      <p>
+        Frontend Developer with 10 years of experience delivering high-quality, scalable, and user-centric
+        web applications across diverse industries including banking, telecommunications, news media, and
+        e-commerce. Proficient in modern frontend technologies such as React, Angular, HTML, CSS, and
+        JavaScript, with a strong focus on performance, responsive design, and maintainable code. Adept at
+        collaborating with cross-functional teams in agile environments to translate complex business
+        requirements into seamless digital experiences. Passionate about clean architecture, UI/UX best
+        practices, and continuous learning in a fast-evolving tech landscape.
+      </p>
       <a href="#projects"
         class="mt-4 inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in"
         style="animation-delay: 0.6s">View projects</a>
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a]">
     <div id="projects-container" class="grid gap-24"></div>
   </section>
 
-  <!-- Template and Script -->
   <template id="project-template">
     <div class="fade-in">
       <div class="flex flex-col md:flex-row items-center gap-12">
@@ -197,7 +203,7 @@
           "Google Analytics",
           "Unit Testing"
         ],
-        link: 'https://www.gnp.com.mx' // ajustable
+        link: 'https://www.gnp.com.mx'
       },
       {
         image: 'images/sol.png',
@@ -219,7 +225,7 @@
           "Google Analytics",
           "Unit Testing"
         ],
-        link: '#' // no pública, puedes actualizarlo
+        link: 'https://oem.com.mx/elsoldemexico/'
       },
       {
         image: 'images/royalcar.png',
@@ -266,8 +272,8 @@
         link: 'https://www.televisa.com'
       },
       {
-        image: 'images/banorte.png',
-        title: 'Banorte',
+        image: 'images/hyb.png',
+        title: 'Banorte hilo y barro',
         company: 'Virk',
         description:
           'Developed secure and responsive frontend components for Banorte’s web systems. Focused on performance and modular architecture using PHP, AngularJS, and SCSS.',
@@ -282,7 +288,7 @@
           "CSS",
           "NPM"
         ],
-        link: 'https://www.banorte.com'
+        link: '#'
       },
       {
         image: 'images/chile.jpg',
@@ -301,29 +307,10 @@
           "CSS",
           "NPM"
         ],
-        link: '#' // no pública
+        link: 'https://www.fdd.cl/proyectos/vecinos-conectados/'
       },
       {
-        image: 'images/guatemala-gov.png',
-        title: 'Government of Guatemala',
-        company: 'Virk',
-        description:
-          'Built web solutions for public transparency and citizen engagement using PHP, AngularJS, and modular frontend tooling.',
-        tags: [
-          "WordPress",
-          "AngularJS",
-          "JQuery",
-          "PHP",
-          "SQL",
-          "SCSS",
-          "JavaScript",
-          "CSS",
-          "NPM"
-        ],
-        link: '#'
-      },
-      {
-        image: 'images/amnistia.png',
+        image: 'images/amn.png',
         title: 'Amnistía Internacional',
         company: 'Virk',
         description:
@@ -358,27 +345,8 @@
           "CSS",
           "NPM"
         ],
-        link: '#' // ajustable
+        link: 'https://www.smashmexico.com.mx/'
       },
-      {
-        image: 'images/playa.png',
-        title: 'Playa del Carmen Government',
-        company: 'Virk',
-        description:
-          'Built public service portals for Playa del Carmen’s municipal government, ensuring responsiveness, accessibility, and easy content management.',
-        tags: [
-          "WordPress",
-          "AngularJS",
-          "JQuery",
-          "PHP",
-          "SQL",
-          "SCSS",
-          "JavaScript",
-          "CSS",
-          "NPM"
-        ],
-        link: '#'
-      }
     ];
 
     const container = document.getElementById('projects-container');
@@ -408,9 +376,8 @@
     });
   </script>
 
-  <!-- Footer -->
   <footer class="bg-[#000000] text-center py-10 text-sm text-[#39ff14]">
-    <p>&copy; 2025 Tu Nombre — Inspirado en Matrix ✨</p>
+    <p>&copy; 2025 Alejandro Rodríguez Larracilla</p>
   </footer>
 </body>
 
