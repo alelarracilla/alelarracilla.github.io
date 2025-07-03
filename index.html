@@ -58,40 +58,61 @@
       <div class="flex flex-col md:flex-row items-center gap-12">
         <img src="" alt="Proyecto" class="rounded-3xl shadow-2xl w-full md:w-1/2 object-cover order-1" />
         <div class="mt-8 md:mt-0 md:w-1/2 order-2">
-          <h3 class="text-3xl font-semibold mb-2 text-[#39ff14]">Título</h3>
-          <p class="mb-4 text-gray-300">Descripción</p>
-          <p class="text-sm text-[#00ff00] mb-4">Tecnologías</p>
-          <a href="#" class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition">Ver Proyecto</a>
+          <h3 class="text-3xl font-semibold mb-2 text-[#39ff14] project-title">Título</h3>
+          <p class="mb-2 text-sm text-gray-400 font-light project-company">Compañía</p>
+          <p class="mb-4 text-gray-300 project-description">Descripción</p>
+          <div class="flex flex-wrap gap-2 mb-4 tags"></div>
+          <a href="#" class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition project-link">Ver Proyecto</a>
         </div>
       </div>
     </div>
   </template>
 
   <script>
+    const projects = [
+      {
+        image: 'images/bloomscape',
+        title: 'Proyecto 1',
+        company: 'Matrix Corp',
+        description: 'Este es un proyecto experimental con diseño futurista.',
+        tags: ['React', 'Tailwind', 'Node.js'],
+        link: '#proyecto-1'
+      },
+      {
+        image: 'https://source.unsplash.com/random/800x600?sig=2',
+        title: 'Proyecto 2',
+        company: 'Neo Devs',
+        description: 'Plataforma digital conectando inteligencias.',
+        tags: ['Vue', 'Vite', 'Firebase'],
+        link: '#proyecto-2'
+      }
+    ];
+
     const container = document.getElementById('projects-container');
     const template = document.getElementById('project-template');
-    for (let i = 1; i <= 20; i++) {
+
+    projects.forEach((project, i) => {
       const clone = template.content.cloneNode(true);
       const wrapper = clone.querySelector('div.flex');
-      const img = clone.querySelector('img');
-      const title = clone.querySelector('h3');
-      const desc = clone.querySelector('p');
-      const tech = clone.querySelectorAll('p')[1];
-      const link = clone.querySelector('a');
+      if (i % 2 !== 0) wrapper.classList.add('md:flex-row-reverse');
 
-      if (i % 2 === 0) {
-        wrapper.classList.add('md:flex-row-reverse');
-      }
+      clone.querySelector('img').src = project.image;
+      clone.querySelector('img').alt = project.title;
+      clone.querySelector('.project-title').textContent = project.title;
+      clone.querySelector('.project-company').textContent = project.company;
+      clone.querySelector('.project-description').textContent = project.description;
+      clone.querySelector('.project-link').href = project.link;
 
-      img.src = `https://source.unsplash.com/random/800x600?sig=${i}`;
-      img.alt = `Proyecto ${i}`;
-      title.textContent = `Proyecto ${i}`;
-      desc.textContent = `Este es el proyecto número ${i}, diseñado para demostrar un enfoque profesional e inspirador.`;
-      tech.textContent = `Tecnologías: HTML, CSS, JS, API`;
-      link.href = `#proyecto-${i}`;
+      const tagsContainer = clone.querySelector('.tags');
+      project.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'bg-[#39ff14] text-black text-xs px-3 py-1 rounded-full';
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
 
       container.appendChild(clone);
-    }
+    });
   </script>
 
   <!-- Footer -->
