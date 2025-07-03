@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Portafolio - Awwwards Style</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
       font-family: 'Space Grotesk', sans-serif;
     }
+
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
       animation: fadeIn 1s ease forwards;
     }
+
     @keyframes fadeIn {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .neon-text {
       text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #00ff00, 0 0 40px #00ff00;
     }
+
     .glow-btn {
       box-shadow: 0 0 8px #39ff14, 0 0 16px #00ff00;
     }
   </style>
 </head>
+
 <body class="bg-[#000000] text-white">
   <!-- Hero Section -->
   <section class="h-screen relative flex items-center justify-center text-center overflow-hidden">
-    <video autoplay loop muted class="absolute w-full h-full object-cover">
-      <source src="https://cdn.coverr.co/videos/coverr-night-mountain-2330/1080p.mp4" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-black bg-opacity-90"></div>
+    <img src="images/background.gif" class="absolute w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
     <div class="relative z-10 max-w-3xl px-6 py-12">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in neon-text">Tu Nombre</h1>
-      <p class="text-xl md:text-2xl text-[#39ff14] italic mb-6 fade-in" style="animation-delay: 0.3s">Diseño + Tecnología + Magia Verde</p>
-      <a href="#projects" class="mt-4 inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in" style="animation-delay: 0.6s">Ver Proyectos</a>
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in neon-text">Alejandro Rodriguez</h1>
+      <p class="text-xl md:text-2xl text-[#39ff14] italic mb-6 fade-in" style="animation-delay: 0.3s">Lead Frontend
+        developer - Senior Frontend developer - Fullstack JS Developer</p>
+      <a href="#projects"
+        class="mt-4 inline-block bg-[#39ff14] text-black font-semibold px-6 py-3 rounded-xl glow-btn hover:bg-[#32e100] transition fade-in"
+        style="animation-delay: 0.6s">View projects</a>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a]">
-    <h2 class="text-4xl font-bold text-center mb-16 fade-in neon-text">🟢 Proyectos Verdes</h2>
     <div id="projects-container" class="grid gap-24"></div>
   </section>
 
@@ -62,7 +73,9 @@
           <p class="mb-2 text-sm text-gray-400 font-light project-company">Compañía</p>
           <p class="mb-4 text-gray-300 project-description">Descripción</p>
           <div class="flex flex-wrap gap-2 mb-4 tags"></div>
-          <a href="#" class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition project-link">Ver Proyecto</a>
+          <a href="#"
+            class="inline-block bg-[#39ff14] text-black px-5 py-2 rounded-full glow-btn hover:bg-[#32e100] transition project-link">View
+            project</a>
         </div>
       </div>
     </div>
@@ -71,20 +84,300 @@
   <script>
     const projects = [
       {
-        image: 'images/bloomscape',
-        title: 'Proyecto 1',
-        company: 'Matrix Corp',
-        description: 'Este es un proyecto experimental con diseño futurista.',
-        tags: ['React', 'Tailwind', 'Node.js'],
-        link: '#proyecto-1'
+        image: 'images/bloomscape.png',
+        title: 'Bloomscape',
+        company: 'Distillery',
+        description: 'Led the development and support of Bloomscape’s WooCommerce-based e-commerce platform. Worked extensively with WordPress, WooCommerce, PHP, and custom React components to deliver dynamic, high-performance user experiences. Developed and maintained custom themes and plugins, optimized frontend performance, and collaborated with design and backend teams to ensure a seamless, scalable, and conversion-focused storefront.',
+        tags: ['React', 'Tailwind', 'Node.js', 'Wordpress', 'ES6', 'Woocomerce', 'Stripe', 'AWS', 'Typescript'],
+        link: 'https://bloomscape.com/'
       },
       {
-        image: 'https://source.unsplash.com/random/800x600?sig=2',
-        title: 'Proyecto 2',
-        company: 'Neo Devs',
-        description: 'Plataforma digital conectando inteligencias.',
-        tags: ['Vue', 'Vite', 'Firebase'],
-        link: '#proyecto-2'
+        image: 'images/fabfitfun.png',
+        title: 'FabFitFun',
+        company: 'Distillery',
+        description: 'Provided end-to-end support for FabFitFun’s e-commerce ecosystem, ensuring platform stability and continuous improvement of the digital user experience. Led key internal projects, including the redesign of the main landing page to drive new customer acquisition and the optimization of the checkout flow to increase conversion rates.',
+        tags: [
+          "ReactJs",
+          "React Testing Library",
+          "Playwright E2E",
+          "GitHub CI/CD",
+          "Monorepo",
+          "Nx",
+          "Next.js",
+          "Recurly",
+          "A/B Testing",
+          "Segment Tracking",
+          "Google Analytics",
+          "SCSS",
+          "Sanity CMS",
+          "TypeScript",
+          "JIRA",
+          "AWS"
+        ],
+        link: 'https://fabfitfun.com/get-the-box'
+      },
+      {
+        image: 'images/repair.png',
+        title: 'Repair Smith',
+        company: 'Distillery',
+        description: 'Implemented a virtual logbook to track mechanic work hours, enhancing operational visibility and efficiency. Provided continuous support for the main website, ensuring platform functionality, stability, and a seamless user experience.',
+        tags: [
+          "ReactJs",
+          "GitLab",
+          "NodeJs",
+          "SCSS",
+          "JavaScript",
+          "ES6",
+          "HTML",
+          "JIRA",
+          "Azure DevOps",
+          "GitHub CI/CD"
+        ],
+        link: 'https://repairsmith.com'
+      },
+      {
+        image: 'images/johson.png',
+        title: 'FIFA Qatar World Cup',
+        company: 'Globant',
+        description:
+          'Developed multiple MVPs for the FIFA Qatar World Cup project, enabling stadium owners to interact with and manage infrastructure through immersive 3D systems. Built real-time interfaces for smart devices including sensors, cameras, and alarms using modern web technologies and visual data layers.',
+        tags: [
+          "Angular 7",
+          "ES6",
+          "Axios",
+          "Unit Testing",
+          "SCSS",
+          "TypeScript",
+          "Brick Schema",
+          "D3.js",
+          "HTML",
+          "Azure"
+        ],
+        link: 'https://more.globant.com/reinventing-fifa-digital-experience'
+      },
+      {
+        image: 'images/liverpool.png',
+        title: 'Liverpool',
+        company: 'Amarello',
+        description:
+          'Led front-end architecture and delivery for Liverpool’s web platform. Built scalable component libraries in AngularJS, Angular 2+, and React, integrating real-time data layers with Firebase and Google Cloud. Improved load times and Lighthouse scores, and implemented unit testing and analytics for continuous optimization.',
+        tags: [
+          "AngularJS",
+          "Angular 2+",
+          "ReactJs",
+          "Firebase",
+          "Google Cloud",
+          "App Engine",
+          "Python",
+          "HTML",
+          "SCSS",
+          "D3.js",
+          "Google Analytics",
+          "Unit Testing"
+        ],
+        link: 'https://www.liverpool.com.mx'
+      },
+      {
+        image: 'images/gnp.png',
+        title: 'GNP Seguros',
+        company: 'Amarello',
+        description:
+          'Led front-end architecture and delivery for GNP Seguros. Developed scalable component libraries using Angular and React, integrated Firebase data layers, and optimized performance through Google Cloud and App Engine.',
+        tags: [
+          "AngularJS",
+          "Angular 2+",
+          "ReactJs",
+          "Firebase",
+          "Google Cloud",
+          "App Engine",
+          "Python",
+          "HTML",
+          "SCSS",
+          "D3.js",
+          "Google Analytics",
+          "Unit Testing"
+        ],
+        link: 'https://www.gnp.com.mx' // ajustable
+      },
+      {
+        image: 'images/sol.png',
+        title: 'Sol de México',
+        company: 'Amarello',
+        description:
+          'Delivered mobile-first web architecture for Sol de México, integrating real-time data, visualizations with D3.js, and performance-focused engineering across the full frontend stack.',
+        tags: [
+          "AngularJS",
+          "Angular 2+",
+          "ReactJs",
+          "Firebase",
+          "Google Cloud",
+          "App Engine",
+          "Python",
+          "HTML",
+          "SCSS",
+          "D3.js",
+          "Google Analytics",
+          "Unit Testing"
+        ],
+        link: '#' // no pública, puedes actualizarlo
+      },
+      {
+        image: 'images/royalcar.png',
+        title: 'Royal Caribbean',
+        company: 'Amarello',
+        description:
+          'Architected and deployed a robust frontend for Royal Caribbean’s regional web experience. Focused on performance, scalability, and cross-functional delivery using Angular, React, and Firebase.',
+        tags: [
+          "AngularJS",
+          "Angular 2+",
+          "ReactJs",
+          "Firebase",
+          "Google Cloud",
+          "App Engine",
+          "Python",
+          "HTML",
+          "SCSS",
+          "D3.js",
+          "Google Analytics",
+          "Unit Testing"
+        ],
+        link: 'https://www.royalcaribbean.com.mx'
+      },
+      {
+        image: 'images/televisas.png',
+        title: 'Televisa',
+        company: 'Amarello',
+        description:
+          'Led frontend engineering for Televisa’s high-traffic digital experience. Developed reusable components and real-time dashboards with D3.js, integrated with scalable cloud infrastructure and analytics.',
+        tags: [
+          "AngularJS",
+          "Angular 2+",
+          "ReactJs",
+          "Firebase",
+          "Google Cloud",
+          "App Engine",
+          "Python",
+          "HTML",
+          "SCSS",
+          "D3.js",
+          "Google Analytics",
+          "Unit Testing"
+        ],
+        link: 'https://www.televisa.com'
+      },
+      {
+        image: 'images/banorte.png',
+        title: 'Banorte',
+        company: 'Virk',
+        description:
+          'Developed secure and responsive frontend components for Banorte’s web systems. Focused on performance and modular architecture using PHP, AngularJS, and SCSS.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: 'https://www.banorte.com'
+      },
+      {
+        image: 'images/chile.jpg',
+        title: 'Government of Chile',
+        company: 'Virk',
+        description:
+          'Delivered government-focused websites for Chile using WordPress and AngularJS. Ensured accessibility, performance, and compliance with public sector standards.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: '#' // no pública
+      },
+      {
+        image: 'images/guatemala-gov.png',
+        title: 'Government of Guatemala',
+        company: 'Virk',
+        description:
+          'Built web solutions for public transparency and citizen engagement using PHP, AngularJS, and modular frontend tooling.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: '#'
+      },
+      {
+        image: 'images/amnistia.png',
+        title: 'Amnistía Internacional',
+        company: 'Virk',
+        description:
+          'Created responsive campaign pages and advocacy tools for Amnistía Internacional, using WordPress and JS frameworks to support social action initiatives.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: 'https://www.amnesty.org'
+      },
+      {
+        image: 'images/smash.png',
+        title: 'Smash',
+        company: 'Virk',
+        description:
+          'Developed frontend for Smash’s digital publishing platform, using SCSS and JavaScript with modular component architecture.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: '#' // ajustable
+      },
+      {
+        image: 'images/playa.png',
+        title: 'Playa del Carmen Government',
+        company: 'Virk',
+        description:
+          'Built public service portals for Playa del Carmen’s municipal government, ensuring responsiveness, accessibility, and easy content management.',
+        tags: [
+          "WordPress",
+          "AngularJS",
+          "JQuery",
+          "PHP",
+          "SQL",
+          "SCSS",
+          "JavaScript",
+          "CSS",
+          "NPM"
+        ],
+        link: '#'
       }
     ];
 
@@ -120,4 +413,5 @@
     <p>&copy; 2025 Tu Nombre — Inspirado en Matrix ✨</p>
   </footer>
 </body>
+
 </html>
